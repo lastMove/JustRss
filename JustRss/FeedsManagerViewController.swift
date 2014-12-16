@@ -6,16 +6,41 @@
 //  Copyright (c) 2014 More Than That. All rights reserved.
 //
 
-import UIKit
 import CoreData
+import UIKit
 
 class FeedsManagerViewController: UITableViewController,NSFetchedResultsControllerDelegate {
 
     @IBAction func AddFeed(sender: UIButton)
     {
-        UIAl
+        var alertController = UIAlertController(title: "Ajouter", message: "Ajouter un flux", preferredStyle: .Alert)
+        
+       let cancelAction = UIAlertAction(title: "Annuler", style: .Default, handler: nil)
+        presentViewController(alertController, animated: true, completion: nil)
+        alertController.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
+            textField.placeholder = "Nom"
+        });
+        
+        alertController.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
+            textField.placeholder = "Lien"
+        });
+        
+        
+        let okHandler: ((UIAlertAction!) -> Void)! = { action in
+            println("other was tapped")
+            let nameTF = alertController.textFields![0] as UITextField
+            let linkTF = alertController.textFields![1] as UITextField
+            var newFeed = DataManager.sharedInstance.getNewFeed();
+            newFeed.name = nameTF.text;
+            newFeed.link = linkTF.text;
+        }
+        let okAction = UIAlertAction(title: "OK", style: .Default, handler:okHandler);
+        alertController.addAction(okAction);
+        alertController.addAction(cancelAction)
+
         
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,10 +95,11 @@ class FeedsManagerViewController: UITableViewController,NSFetchedResultsControll
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
         let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as Feeds
         cell.textLabel.text = object.name;
+        cell.detailTextLabel!.text = object.link;
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("FeedsCell", forIndexPath: indexPath) as UITableViewCell
         
         self.configureCell(cell, atIndexPath: indexPath)
         return cell
@@ -97,7 +123,7 @@ class FeedsManagerViewController: UITableViewController,NSFetchedResultsControll
         
         fetchRequest.sortDescriptors = [sortDescriptor]
         
-        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: DataManager.sharedInstance.moc!, sectionNameKeyPath: nil, cacheName: "PossibilitiesTableViewController")
+        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: DataManager.sharedInstance.moc!, sectionNameKeyPath: nil, cacheName: "FeedsManagerViewController")
         aFetchedResultsController.delegate = self
         _fetchedResultsController = aFetchedResultsController
         

@@ -46,7 +46,7 @@ class DataManager  {
     {
         if (mom == nil)
         {
-            let modelURL = NSBundle.mainBundle().URLForResource("Model", withExtension: "momd");
+            let modelURL = NSBundle.mainBundle().URLForResource("Data", withExtension: "momd");
             mom = NSManagedObjectModel(contentsOfURL: modelURL!);
         }
         if (psc == nil)

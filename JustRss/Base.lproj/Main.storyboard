@@ -47,7 +47,7 @@
         <!--Feeds Manager View Controller-->
         <scene sceneID="o4j-6e-6VJ">
             <objects>
-                <tableViewController id="68U-Tj-fav" customClass="FeedsManagerViewController" sceneMemberID="viewController">
+                <tableViewController id="68U-Tj-fav" customClass="FeedsManagerViewController" customModule="JustRss" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ta8-tS-fp8">
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,7 +63,7 @@
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="TdV-az-oTP" detailTextLabel="nxj-s4-iJb" style="IBUITableViewCellStyleValue2" id="rNV-lp-Fdu">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedsCell" textLabel="TdV-az-oTP" detailTextLabel="nxj-s4-iJb" style="IBUITableViewCellStyleValue2" id="rNV-lp-Fdu">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rNV-lp-Fdu" id="Wqh-AK-rF9">
                                     <autoresizingMask key="autoresizingMask"/>
