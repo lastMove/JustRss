@@ -33,7 +33,7 @@ class FeedsManagerViewController: UITableViewController,NSFetchedResultsControll
             var newFeed = DataManager.sharedInstance.getNewFeed();
             newFeed.name = nameTF.text;
             newFeed.link = linkTF.text;
-            DataManager.sharedInstance.getDatas();
+            //DataManager.sharedInstance.getDatas();
 
         }
         let okAction = UIAlertAction(title: "OK", style: .Default, handler:okHandler);
@@ -45,7 +45,7 @@ class FeedsManagerViewController: UITableViewController,NSFetchedResultsControll
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DataManager.sharedInstance.getDatas();
+       // DataManager.sharedInstance.getDatas();
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -97,7 +97,7 @@ class FeedsManagerViewController: UITableViewController,NSFetchedResultsControll
     
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
         let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as Feeds
-        cell.textLabel.text = object.name;
+        cell.textLabel!.text = object.name;
         cell.detailTextLabel!.text = object.link;
     }
     

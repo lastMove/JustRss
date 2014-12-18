@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		483467851A432B1B00BAA12B /* ORGArticleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4834677A1A432B1B00BAA12B /* ORGArticleCollectionViewCell.m */; };
+		483467861A432B1B00BAA12B /* ORGArticleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4834677B1A432B1B00BAA12B /* ORGArticleCollectionViewCell.xib */; };
+		483467871A432B1B00BAA12B /* ORGContainerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4834677D1A432B1B00BAA12B /* ORGContainerCell.m */; };
+		483467881A432B1B00BAA12B /* ORGContainerCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4834677F1A432B1B00BAA12B /* ORGContainerCellView.m */; };
+		483467891A432B1B00BAA12B /* ORGContainerCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483467801A432B1B00BAA12B /* ORGContainerCellView.xib */; };
+		4834678A1A432B1B00BAA12B /* ORGDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 483467821A432B1B00BAA12B /* ORGDetailViewController.m */; };
+		4834678B1A432B1B00BAA12B /* ORGMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 483467841A432B1B00BAA12B /* ORGMasterViewController.m */; };
 		7315CF261A404D050085F6A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7315CF251A404D050085F6A1 /* AppDelegate.swift */; };
 		7315CF281A404D050085F6A1 /* FeedsManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7315CF271A404D050085F6A1 /* FeedsManagerViewController.swift */; };
 		7315CF2A1A404D050085F6A1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7315CF291A404D050085F6A1 /* MainViewController.swift */; };
@@ -50,6 +57,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		483467791A432B1B00BAA12B /* ORGArticleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORGArticleCollectionViewCell.h; sourceTree = "<group>"; };
+		4834677A1A432B1B00BAA12B /* ORGArticleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORGArticleCollectionViewCell.m; sourceTree = "<group>"; };
+		4834677B1A432B1B00BAA12B /* ORGArticleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ORGArticleCollectionViewCell.xib; sourceTree = "<group>"; };
+		4834677C1A432B1B00BAA12B /* ORGContainerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORGContainerCell.h; sourceTree = "<group>"; };
+		4834677D1A432B1B00BAA12B /* ORGContainerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORGContainerCell.m; sourceTree = "<group>"; };
+		4834677E1A432B1B00BAA12B /* ORGContainerCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORGContainerCellView.h; sourceTree = "<group>"; };
+		4834677F1A432B1B00BAA12B /* ORGContainerCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORGContainerCellView.m; sourceTree = "<group>"; };
+		483467801A432B1B00BAA12B /* ORGContainerCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ORGContainerCellView.xib; sourceTree = "<group>"; };
+		483467811A432B1B00BAA12B /* ORGDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORGDetailViewController.h; sourceTree = "<group>"; };
+		483467821A432B1B00BAA12B /* ORGDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORGDetailViewController.m; sourceTree = "<group>"; };
+		483467831A432B1B00BAA12B /* ORGMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORGMasterViewController.h; sourceTree = "<group>"; };
+		483467841A432B1B00BAA12B /* ORGMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORGMasterViewController.m; sourceTree = "<group>"; };
 		7315CF201A404D050085F6A1 /* JustRss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustRss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7315CF241A404D050085F6A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7315CF251A404D050085F6A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -347,6 +366,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		483467781A432AF400BAA12B /* mainView */ = {
+			isa = PBXGroup;
+			children = (
+				483467791A432B1B00BAA12B /* ORGArticleCollectionViewCell.h */,
+				4834677A1A432B1B00BAA12B /* ORGArticleCollectionViewCell.m */,
+				4834677B1A432B1B00BAA12B /* ORGArticleCollectionViewCell.xib */,
+				4834677C1A432B1B00BAA12B /* ORGContainerCell.h */,
+				4834677D1A432B1B00BAA12B /* ORGContainerCell.m */,
+				4834677E1A432B1B00BAA12B /* ORGContainerCellView.h */,
+				4834677F1A432B1B00BAA12B /* ORGContainerCellView.m */,
+				483467801A432B1B00BAA12B /* ORGContainerCellView.xib */,
+				483467811A432B1B00BAA12B /* ORGDetailViewController.h */,
+				483467821A432B1B00BAA12B /* ORGDetailViewController.m */,
+				483467831A432B1B00BAA12B /* ORGMasterViewController.h */,
+				483467841A432B1B00BAA12B /* ORGMasterViewController.m */,
+			);
+			name = mainView;
+			sourceTree = "<group>";
+		};
 		7315CF171A404D050085F6A1 = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +448,7 @@
 		7315CF471A404FD90085F6A1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				483467781A432AF400BAA12B /* mainView */,
 				7315CF271A404D050085F6A1 /* FeedsManagerViewController.swift */,
 				7315CF291A404D050085F6A1 /* MainViewController.swift */,
 			);
@@ -870,6 +909,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				483467861A432B1B00BAA12B /* ORGArticleCollectionViewCell.xib in Resources */,
+				483467891A432B1B00BAA12B /* ORGContainerCellView.xib in Resources */,
 				7315CF2D1A404D050085F6A1 /* Main.storyboard in Resources */,
 				7315CF321A404D050085F6A1 /* LaunchScreen.xib in Resources */,
 				736957A71A418D5B0019FEC2 /* LICENSE in Resources */,
@@ -895,11 +936,14 @@
 				7315CF2A1A404D050085F6A1 /* MainViewController.swift in Sources */,
 				736957AE1A418D5B0019FEC2 /* UIProgressView+AFNetworking.m in Sources */,
 				7315CF4E1A4051140085F6A1 /* DataManager.swift in Sources */,
+				483467851A432B1B00BAA12B /* ORGArticleCollectionViewCell.m in Sources */,
+				4834678A1A432B1B00BAA12B /* ORGDetailViewController.m in Sources */,
 				736957AB1A418D5B0019FEC2 /* UIAlertView+AFNetworking.m in Sources */,
 				736958061A418D730019FEC2 /* RSSItem.m in Sources */,
 				736957A11A418D5B0019FEC2 /* AFNetworkReachabilityManager.m in Sources */,
 				7315CF261A404D050085F6A1 /* AppDelegate.swift in Sources */,
 				736957AC1A418D5B0019FEC2 /* UIButton+AFNetworking.m in Sources */,
+				483467871A432B1B00BAA12B /* ORGContainerCell.m in Sources */,
 				736957A31A418D5B0019FEC2 /* AFURLConnectionOperation.m in Sources */,
 				736957AA1A418D5B0019FEC2 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				736958071A418D730019FEC2 /* RSSParser.m in Sources */,
@@ -912,10 +956,12 @@
 				736957AF1A418D5B0019FEC2 /* UIWebView+AFNetworking.m in Sources */,
 				7315CF501A4051A90085F6A1 /* Feeds.swift in Sources */,
 				7369579F1A418D5B0019FEC2 /* AFHTTPRequestOperationManager.m in Sources */,
+				483467881A432B1B00BAA12B /* ORGContainerCellView.m in Sources */,
 				736957A21A418D5B0019FEC2 /* AFSecurityPolicy.m in Sources */,
 				736957A51A418D5B0019FEC2 /* AFURLResponseSerialization.m in Sources */,
 				736957AD1A418D5B0019FEC2 /* UIImageView+AFNetworking.m in Sources */,
 				7369579E1A418D5B0019FEC2 /* AFHTTPRequestOperation.m in Sources */,
+				4834678B1A432B1B00BAA12B /* ORGMasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

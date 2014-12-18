@@ -17,10 +17,11 @@ class DataManager  {
     var moc:NSManagedObjectContext? = nil;
     var mom:NSManagedObjectModel? = nil;
     var psc:NSPersistentStoreCoordinator? = nil;
- 
+    var cb:((String, [RSSItem]) -> Void)!;
     //  MARK: - INITIALIZATION
     init()
     {
+        
         initAll();
     }
     
@@ -93,19 +94,21 @@ class DataManager  {
     }
     // MARK: - NETWORK
     
-    func getDatas()
+    func buildDatas(cb:(String, [RSSItem]) -> Void)
     {
-        
+        self.cb = cb;
         let feeds = self.getAllFeeds();
-        for feed  in feeds
-        {
-            RSSParser.parseRSSFeedForRequest(NSURLRequest(URL:NSURL(string:"http://feeds.feedburner.com/LeJournalDuGeek")!), success:feedItemsReceived, failure: nil);
-        }
+
+        RSSParser.parseRSSFeedForRequest(NSURLRequest(URL:NSURL(string:"http://feeds.feedburner.com/LeJournalDuGeek")!), success:feedItemsReceived, failure: nil);
+        
+        RSSParser.parseRSSFeedForRequest(NSURLRequest(URL:NSURL(string:"http://feeds.feedburner.com/LeJournalDuGeek")!), success:feedItemsReceived, failure: nil);
     }
     
     func feedItemsReceived(items:[AnyObject]!)
     {
-        println("feedItems \(items)");    
+        var newItems = items as [RSSItem];
+        var name = "toto";
+        cb(name, newItems);
     }
     
     // MARK: - EDIT BDD FUNCtIONS
