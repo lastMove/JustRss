@@ -33,6 +33,8 @@ class FeedsManagerViewController: UITableViewController,NSFetchedResultsControll
             var newFeed = DataManager.sharedInstance.getNewFeed();
             newFeed.name = nameTF.text;
             newFeed.link = linkTF.text;
+            DataManager.sharedInstance.getDatas();
+
         }
         let okAction = UIAlertAction(title: "OK", style: .Default, handler:okHandler);
         alertController.addAction(okAction);
@@ -43,7 +45,8 @@ class FeedsManagerViewController: UITableViewController,NSFetchedResultsControll
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        DataManager.sharedInstance.getDatas();
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         

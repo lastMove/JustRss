@@ -17,8 +17,7 @@ class DataManager  {
     var moc:NSManagedObjectContext? = nil;
     var mom:NSManagedObjectModel? = nil;
     var psc:NSPersistentStoreCoordinator? = nil;
-    var maxOrderId = 0;
-    
+ 
     //  MARK: - INITIALIZATION
     init()
     {
@@ -69,6 +68,19 @@ class DataManager  {
         }
     }
     
+    func getAllFeeds() -> [Feeds]
+    {
+        DataManager.sharedInstance.moc!.save(nil);
+        let fetchRequest = NSFetchRequest(entityName:"Feeds")
+        var err:NSError? = nil;
+        
+        
+        var feeds = self.moc!.executeFetchRequest(fetchRequest, error: &err)
+        println("feeds:\(feeds!)")
+     
+        return feeds as [Feeds];
+        
+    }
     
     // MARK: - GET NEW INSTANCE
     func getNewFeed() -> Feeds
@@ -78,6 +90,22 @@ class DataManager  {
     func getFeedDescription() -> NSEntityDescription
     {
         return NSEntityDescription.entityForName("Feeds", inManagedObjectContext: moc!)!;
+    }
+    // MARK: - NETWORK
+    
+    func getDatas()
+    {
+        
+        let feeds = self.getAllFeeds();
+        for feed  in feeds
+        {
+            RSSParser.parseRSSFeedForRequest(NSURLRequest(URL:NSURL(string:"http://feeds.feedburner.com/LeJournalDuGeek")!), success:feedItemsReceived, failure: nil);
+        }
+    }
+    
+    func feedItemsReceived(items:[AnyObject]!)
+    {
+        println("feedItems \(items)");    
     }
     
     // MARK: - EDIT BDD FUNCtIONS
