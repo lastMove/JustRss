@@ -12,6 +12,25 @@
                         <rect key="frame" x="0.0" y="44" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="LYo-l4-eAX">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="63"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JustRss" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d36-ui-tzg">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="d36-ui-tzg" firstAttribute="top" secondItem="LYo-l4-eAX" secondAttribute="top" id="0pY-0m-oLw"/>
+                                <constraint firstItem="d36-ui-tzg" firstAttribute="leading" secondItem="LYo-l4-eAX" secondAttribute="leading" id="BoU-AL-p59"/>
+                                <constraint firstAttribute="trailing" secondItem="d36-ui-tzg" secondAttribute="trailing" id="DxS-Qi-PBg"/>
+                                <constraint firstAttribute="bottom" secondItem="d36-ui-tzg" secondAttribute="bottom" constant="-11" id="nd0-Z8-BBS"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gwZ-Hw-Cf6">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -78,7 +97,7 @@
                             <outlet property="delegate" destination="68U-Tj-fav" id="Cfb-1H-UFM"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" badgeValue="5" systemItem="favorites" id="5zM-mR-Wq4"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="5zM-mR-Wq4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okI-G3-Ntl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
