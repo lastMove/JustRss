@@ -68,6 +68,7 @@ class MainViewController: UITableViewController {
         var webBrowserNavController = KINWebBrowserViewController.navigationControllerWithWebBrowserWithConfiguration(configuration);
         self.presentViewController(webBrowserNavController, animated: true, completion: nil);
         var webBrowser = webBrowserNavController.rootWebBrowser();
+        webBrowser.actionButtonHidden = true;
         if (link != nil) {
             webBrowser.loadURL(link);
         }
