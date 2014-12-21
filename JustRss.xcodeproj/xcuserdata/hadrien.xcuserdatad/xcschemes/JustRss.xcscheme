@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7315CF1F1A404D050085F6A1"
-               BuildableName = "JustRss.app"
-               BlueprintName = "JustRss"
+               BuildableName = "JustRSS.app"
+               BlueprintName = "JustRSS"
                ReferencedContainer = "container:JustRss.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -57,8 +57,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7315CF1F1A404D050085F6A1"
-            BuildableName = "JustRss.app"
-            BlueprintName = "JustRss"
+            BuildableName = "JustRSS.app"
+            BlueprintName = "JustRSS"
             ReferencedContainer = "container:JustRss.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -76,8 +76,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7315CF1F1A404D050085F6A1"
-            BuildableName = "JustRss.app"
-            BlueprintName = "JustRss"
+            BuildableName = "JustRSS.app"
+            BlueprintName = "JustRSS"
             ReferencedContainer = "container:JustRss.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -94,8 +94,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7315CF1F1A404D050085F6A1"
-            BuildableName = "JustRss.app"
-            BlueprintName = "JustRss"
+            BuildableName = "JustRSS.app"
+            BlueprintName = "JustRSS"
             ReferencedContainer = "container:JustRss.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>C118A9AB-3869-4F33-A25C-3B1929315B3E</string>
 	<key>IDESourceControlProjectName</key>
-	<string>JustRSS</string>
+	<string>JustRss</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>22A46B81D6DF98E733F8CC0A15025B8E65ADCBDA</key>
 		<string>https://github.com/lastMove/JustRss.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>JustRSS.xcodeproj</string>
+	<string>JustRss.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>22A46B81D6DF98E733F8CC0A15025B8E65ADCBDA</key>

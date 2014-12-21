@@ -110,7 +110,7 @@
 		483467821A432B1B00BAA12B /* ORGDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORGDetailViewController.m; sourceTree = "<group>"; };
 		483467831A432B1B00BAA12B /* ORGMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORGMasterViewController.h; sourceTree = "<group>"; };
 		483467841A432B1B00BAA12B /* ORGMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORGMasterViewController.m; sourceTree = "<group>"; };
-		7315CF201A404D050085F6A1 /* JustRss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustRss.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7315CF201A404D050085F6A1 /* JustRSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustRSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7315CF241A404D050085F6A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7315CF251A404D050085F6A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7315CF271A404D050085F6A1 /* FeedsManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsManagerViewController.swift; sourceTree = "<group>"; };
@@ -520,7 +520,7 @@
 		7315CF211A404D050085F6A1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7315CF201A404D050085F6A1 /* JustRss.app */,
+				7315CF201A404D050085F6A1 /* JustRSS.app */,
 				7315CF371A404D050085F6A1 /* JustRssTests.xctest */,
 			);
 			name = Products;
@@ -1099,7 +1099,7 @@
 			);
 			name = JustRSS;
 			productName = JustRss;
-			productReference = 7315CF201A404D050085F6A1 /* JustRss.app */;
+			productReference = 7315CF201A404D050085F6A1 /* JustRSS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		7315CF361A404D050085F6A1 /* JustRssTests */ = {
@@ -1139,7 +1139,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7315CF1B1A404D050085F6A1 /* Build configuration list for PBXProject "JustRSS" */;
+			buildConfigurationList = 7315CF1B1A404D050085F6A1 /* Build configuration list for PBXProject "JustRss" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1438,7 +1438,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7315CF1B1A404D050085F6A1 /* Build configuration list for PBXProject "JustRSS" */ = {
+		7315CF1B1A404D050085F6A1 /* Build configuration list for PBXProject "JustRss" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7315CF3F1A404D050085F6A1 /* Debug */,
