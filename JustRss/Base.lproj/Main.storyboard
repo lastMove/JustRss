@@ -17,21 +17,17 @@
                             <rect key="frame" x="0.0" y="0.0" width="600" height="93"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JustRss" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d36-ui-tzg">
-                                    <rect key="frame" x="123" y="0.0" width="354" height="104"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="JustRss" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d36-ui-tzg">
+                                    <rect key="frame" x="140" y="0.0" width="320" height="176"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QR0-gE-XU7">
-                                    <rect key="frame" x="485" y="22" width="115" height="60"/>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QR0-gE-XU7">
+                                    <rect key="frame" x="468" y="22" width="132" height="132"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="115" id="HIv-Ao-7Gi"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                    <state key="normal" title="Refresh">
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
                                     <connections>
                                         <action selector="refreshTapped:" destination="g8b-wj-RKa" eventType="touchUpInside" id="DRL-4v-FuI"/>
                                     </connections>
