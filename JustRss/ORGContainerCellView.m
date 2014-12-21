@@ -8,6 +8,7 @@
 
 #import "ORGContainerCellView.h"
 #import "ORGArticleCollectionViewCell.h"
+#import "UIImageView+WebCache.m"
 #import <QuartzCore/QuartzCore.h>
 
 @interface ORGContainerCellView () <UICollectionViewDataSource, UICollectionViewDelegate>
@@ -23,7 +24,7 @@
 
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    flowLayout.itemSize = CGSizeMake(130.0, 170.0);
+    flowLayout.itemSize = CGSizeMake(170.0, 130.0);
     [self.collectionView setCollectionViewLayout:flowLayout];
 
     // Register the colleciton cell
@@ -61,7 +62,11 @@
 {
     ORGArticleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ORGArticleCollectionViewCell" forIndexPath:indexPath];
     NSDictionary *cellData = [self.collectionData objectAtIndex:[indexPath row]];
+    NSString *imageURL = [cellData objectForKey:@"imageLink"];
     cell.articleTitle.text = [cellData objectForKey:@"title"];
+    
+    if (imageURL)
+        [cell.articleImage sd_setImageWithURL:[NSURL URLWithString:imageURL]];
     return cell;
 }
 

@@ -53,6 +53,7 @@
         [(NSXMLParser *)responseObject parse];
     }
                                      failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                         if (failure)
                                          failure(error);
                                      }];
     

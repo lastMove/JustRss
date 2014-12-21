@@ -7,3 +7,5 @@
 #import "ORGDetailViewController.h"
 #import "ORGContainerCell.h"
 #import "ORGContainerCellView.h"
+#import "HTMLReader.h"
+#import "KINWebBrowserViewController.h"

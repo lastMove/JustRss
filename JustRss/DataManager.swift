@@ -98,10 +98,15 @@ class DataManager  {
     {
         self.cb = cb;
         let feeds = self.getAllFeeds();
-
-        RSSParser.parseRSSFeedForRequest(NSURLRequest(URL:NSURL(string:"http://feeds.feedburner.com/LeJournalDuGeek")!), success:feedItemsReceived, failure: nil);
-        
-        RSSParser.parseRSSFeedForRequest(NSURLRequest(URL:NSURL(string:"http://feeds.feedburner.com/LeJournalDuGeek")!), success:feedItemsReceived, failure: nil);
+        for feed in feeds
+        {
+            RSSParser.parseRSSFeedForRequest(NSURLRequest(URL:NSURL(string:feed.link)!), success:{items in
+                var newItems = items as [RSSItem]
+                cb(feed.name, newItems);
+                
+                }, failure: nil);
+        }
+        //RSSParser.parseRSSFeedForRequest(NSURLRequest(URL:NSURL(string:"http://feeds.feedburner.com/LeJournalDuGeek")!), success:feedItemsReceived, failure: nil);
     }
     
     func feedItemsReceived(items:[AnyObject]!)

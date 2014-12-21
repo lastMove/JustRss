@@ -10,8 +10,8 @@ import UIKit
 
 class MainViewController: UITableViewController {
 
-    var datas = Array<Array<[String:String]>>();
-    var titles = ["title1", "title2"];
+    var datas = Array<Array<[String:AnyObject]>>();
+    var titles:[String] = [];
 
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -29,18 +29,43 @@ class MainViewController: UITableViewController {
     func buildData(name:String, feeds:[RSSItem])
     {
         self.titles.append(name);
-        var allFeeds = Array<[String : String]>();
+        var allFeeds = Array<[String : AnyObject]>();
         for feed in feeds
         {
-            allFeeds.append(["title":feed.title]);
+            allFeeds.append(["title":feed.title, "imageLink":imageLinkFromContent(feed.content), "content":feed.content]);
         }
         self.datas.append(allFeeds);
         self.tableView.reloadData()
     }
-    
-    func didSelectItemFromCollectionView(not:NSNotification)
+    func imageLinkFromContent(content:NSString) -> String
     {
+        var error:NSError? = nil;
+        var regex:NSRegularExpression = NSRegularExpression(pattern: "(<img\\s[\\s\\S]*?src\\s*?=\\s*?['\"](.*?)['\"][\\s\\S]*?>)+?", options: NSRegularExpressionOptions.CaseInsensitive, error: &error)!;
         
+        var result = regex.firstMatchInString(content, options: NSMatchingOptions.ReportCompletion, range: NSMakeRange(0, content.length));
+        if (result == nil)
+        {
+            return "";
+        }
+        return content.substringWithRange(result!.rangeAtIndex(2));
+        
+        
+        
+    }
+        func didSelectItemFromCollectionView(not:NSNotification)
+    {
+        var content = not.object!.objectForKey("content") as String;
+        
+        var webBrowserNavController = KINWebBrowserViewController.navigationControllerWithWebBrowser();
+        self.presentViewController(webBrowserNavController, animated: true, completion: nil);
+        var webBrowser = webBrowserNavController.rootWebBrowser();
+         webBrowser.wkWebView.loadHTMLString(content, baseURL: nil);
+        /*
+        UINavigationController *webBrowserNavigationController = [KINWebBrowserViewController navigationControllerWithWebBrowser];
+        [self presentViewController:webBrowserNavigationController animated:YES completion:nil];
+        
+        KINWebBrowserViewController *webBrowser = [webBrowserNavigationController rootWebBrowser];
+        [webBrowser loadURLString:@"http://www.example.com"];*/
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -71,7 +96,7 @@ class MainViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 180.0;
+        return 140.0;
     }
 
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
