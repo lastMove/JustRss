@@ -17,18 +17,30 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JustRss" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d36-ui-tzg">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
+                                    <rect key="frame" x="123" y="-5" width="354" height="74"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QR0-gE-XU7">
+                                    <rect key="frame" x="485" y="17" width="115" height="30"/>
+                                    <state key="normal" title="Refresh">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="refreshTapped:" destination="g8b-wj-RKa" eventType="touchUpInside" id="DRL-4v-FuI"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="d36-ui-tzg" firstAttribute="top" secondItem="LYo-l4-eAX" secondAttribute="top" id="0pY-0m-oLw"/>
-                                <constraint firstItem="d36-ui-tzg" firstAttribute="leading" secondItem="LYo-l4-eAX" secondAttribute="leading" id="BoU-AL-p59"/>
-                                <constraint firstAttribute="trailing" secondItem="d36-ui-tzg" secondAttribute="trailing" id="DxS-Qi-PBg"/>
-                                <constraint firstAttribute="bottom" secondItem="d36-ui-tzg" secondAttribute="bottom" constant="-11" id="nd0-Z8-BBS"/>
+                                <constraint firstItem="d36-ui-tzg" firstAttribute="top" secondItem="LYo-l4-eAX" secondAttribute="top" constant="-5" id="0pY-0m-oLw"/>
+                                <constraint firstItem="d36-ui-tzg" firstAttribute="leading" secondItem="LYo-l4-eAX" secondAttribute="leading" constant="123" id="BoU-AL-p59"/>
+                                <constraint firstAttribute="trailing" secondItem="QR0-gE-XU7" secondAttribute="trailing" id="D2U-6W-Hkn"/>
+                                <constraint firstAttribute="trailing" secondItem="d36-ui-tzg" secondAttribute="trailing" constant="123" id="DxS-Qi-PBg"/>
+                                <constraint firstItem="QR0-gE-XU7" firstAttribute="leading" secondItem="d36-ui-tzg" secondAttribute="trailing" constant="8" symbolic="YES" id="Ex4-WT-Dqf"/>
+                                <constraint firstItem="QR0-gE-XU7" firstAttribute="centerY" secondItem="d36-ui-tzg" secondAttribute="centerY" id="XaJ-IW-v9u"/>
+                                <constraint firstAttribute="bottom" secondItem="d36-ui-tzg" secondAttribute="bottom" constant="-6" id="nd0-Z8-BBS"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -50,7 +62,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Son-XU-XMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="713" y="-503"/>
+            <point key="canvasLocation" x="389" y="-598"/>
         </scene>
         <!--Feeds Manager View Controller-->
         <scene sceneID="o4j-6e-6VJ">
@@ -123,4 +135,5 @@
             <point key="canvasLocation" x="-128" y="-166"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.50196081399917603" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

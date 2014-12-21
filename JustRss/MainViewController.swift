@@ -23,9 +23,18 @@ class MainViewController: UITableViewController {
         
         self.tableView .registerClass(ORGContainerCell.self, forCellReuseIdentifier: "ORGContainerCell");
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "didSelectItemFromCollectionView:", name: "didSelectItemFromCollectionView", object: nil);
+    }
+    override func viewDidAppear(animated: Bool) {
+        datas.removeAll(keepCapacity: false);
         DataManager.sharedInstance.buildDatas(buildData);
+
     }
     
+    @IBAction func refreshTapped(sender: UIButton)
+    {
+        datas.removeAll(keepCapacity: false);
+        DataManager.sharedInstance.buildDatas(buildData);
+    }
     func buildData(name:String, feeds:[RSSItem])
     {
         self.titles.append(name);
@@ -55,17 +64,13 @@ class MainViewController: UITableViewController {
         func didSelectItemFromCollectionView(not:NSNotification)
     {
         var content = not.object!.objectForKey("content") as String;
+        var configuration = WKWebViewConfiguration();
         
-        var webBrowserNavController = KINWebBrowserViewController.navigationControllerWithWebBrowser();
+        var webBrowserNavController = KINWebBrowserViewController.navigationControllerWithWebBrowserWithConfiguration(configuration);
         self.presentViewController(webBrowserNavController, animated: true, completion: nil);
         var webBrowser = webBrowserNavController.rootWebBrowser();
-         webBrowser.wkWebView.loadHTMLString(content, baseURL: nil);
-        /*
-        UINavigationController *webBrowserNavigationController = [KINWebBrowserViewController navigationControllerWithWebBrowser];
-        [self presentViewController:webBrowserNavigationController animated:YES completion:nil];
+        webBrowser.wkWebView.loadHTMLString(content, baseURL: nil);
         
-        KINWebBrowserViewController *webBrowser = [webBrowserNavigationController rootWebBrowser];
-        [webBrowser loadURLString:@"http://www.example.com"];*/
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
