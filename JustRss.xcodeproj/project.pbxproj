@@ -1085,9 +1085,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7315CF1F1A404D050085F6A1 /* JustRss */ = {
+		7315CF1F1A404D050085F6A1 /* JustRSS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7315CF411A404D050085F6A1 /* Build configuration list for PBXNativeTarget "JustRss" */;
+			buildConfigurationList = 7315CF411A404D050085F6A1 /* Build configuration list for PBXNativeTarget "JustRSS" */;
 			buildPhases = (
 				7315CF1C1A404D050085F6A1 /* Sources */,
 				7315CF1D1A404D050085F6A1 /* Frameworks */,
@@ -1097,7 +1097,7 @@
 			);
 			dependencies = (
 			);
-			name = JustRss;
+			name = JustRSS;
 			productName = JustRss;
 			productReference = 7315CF201A404D050085F6A1 /* JustRss.app */;
 			productType = "com.apple.product-type.application";
@@ -1139,7 +1139,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7315CF1B1A404D050085F6A1 /* Build configuration list for PBXProject "JustRss" */;
+			buildConfigurationList = 7315CF1B1A404D050085F6A1 /* Build configuration list for PBXProject "JustRSS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1152,7 +1152,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7315CF1F1A404D050085F6A1 /* JustRss */,
+				7315CF1F1A404D050085F6A1 /* JustRSS */,
 				7315CF361A404D050085F6A1 /* JustRssTests */,
 			);
 		};
@@ -1273,7 +1273,7 @@
 /* Begin PBXTargetDependency section */
 		7315CF391A404D050085F6A1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7315CF1F1A404D050085F6A1 /* JustRss */;
+			target = 7315CF1F1A404D050085F6A1 /* JustRSS */;
 			targetProxy = 7315CF381A404D050085F6A1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1339,7 +1339,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "JustRss/JustRss.Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1376,7 +1376,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "JustRss/JustRss.Bridging-Header.h";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1438,7 +1438,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7315CF1B1A404D050085F6A1 /* Build configuration list for PBXProject "JustRss" */ = {
+		7315CF1B1A404D050085F6A1 /* Build configuration list for PBXProject "JustRSS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7315CF3F1A404D050085F6A1 /* Debug */,
@@ -1447,7 +1447,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7315CF411A404D050085F6A1 /* Build configuration list for PBXNativeTarget "JustRss" */ = {
+		7315CF411A404D050085F6A1 /* Build configuration list for PBXNativeTarget "JustRSS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7315CF421A404D050085F6A1 /* Debug */,
