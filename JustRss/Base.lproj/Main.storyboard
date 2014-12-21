@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -13,17 +14,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="LYo-l4-eAX">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="63"/>
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="93"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JustRss" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d36-ui-tzg">
-                                    <rect key="frame" x="123" y="-5" width="354" height="74"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="123" y="0.0" width="354" height="104"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QR0-gE-XU7">
-                                    <rect key="frame" x="485" y="17" width="115" height="30"/>
+                                    <rect key="frame" x="485" y="22" width="115" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="115" id="HIv-Ao-7Gi"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                     <state key="normal" title="Refresh">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
@@ -34,13 +39,13 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="d36-ui-tzg" firstAttribute="top" secondItem="LYo-l4-eAX" secondAttribute="top" constant="-5" id="0pY-0m-oLw"/>
-                                <constraint firstItem="d36-ui-tzg" firstAttribute="leading" secondItem="LYo-l4-eAX" secondAttribute="leading" constant="123" id="BoU-AL-p59"/>
-                                <constraint firstAttribute="trailing" secondItem="QR0-gE-XU7" secondAttribute="trailing" id="D2U-6W-Hkn"/>
-                                <constraint firstAttribute="trailing" secondItem="d36-ui-tzg" secondAttribute="trailing" constant="123" id="DxS-Qi-PBg"/>
-                                <constraint firstItem="QR0-gE-XU7" firstAttribute="leading" secondItem="d36-ui-tzg" secondAttribute="trailing" constant="8" symbolic="YES" id="Ex4-WT-Dqf"/>
-                                <constraint firstItem="QR0-gE-XU7" firstAttribute="centerY" secondItem="d36-ui-tzg" secondAttribute="centerY" id="XaJ-IW-v9u"/>
-                                <constraint firstAttribute="bottom" secondItem="d36-ui-tzg" secondAttribute="bottom" constant="-6" id="nd0-Z8-BBS"/>
+                                <constraint firstItem="d36-ui-tzg" firstAttribute="top" secondItem="LYo-l4-eAX" secondAttribute="topMargin" constant="-8" id="1qZ-Gi-GLX"/>
+                                <constraint firstItem="d36-ui-tzg" firstAttribute="centerX" secondItem="LYo-l4-eAX" secondAttribute="centerX" id="8fw-fN-z8c"/>
+                                <constraint firstAttribute="trailing" secondItem="QR0-gE-XU7" secondAttribute="trailing" id="E5K-JR-wr1"/>
+                                <constraint firstItem="d36-ui-tzg" firstAttribute="centerY" secondItem="QR0-gE-XU7" secondAttribute="centerY" id="THT-vK-UXd"/>
+                                <constraint firstItem="QR0-gE-XU7" firstAttribute="top" secondItem="LYo-l4-eAX" secondAttribute="top" constant="22" id="crQ-mh-cJs"/>
+                                <constraint firstAttribute="bottom" secondItem="QR0-gE-XU7" secondAttribute="bottom" constant="11" id="i6G-XR-BTp"/>
+                                <constraint firstItem="QR0-gE-XU7" firstAttribute="leading" secondItem="d36-ui-tzg" secondAttribute="trailing" constant="8" symbolic="YES" id="pnB-xz-I0b"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -62,7 +67,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Son-XU-XMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="389" y="-598"/>
+            <point key="canvasLocation" x="702" y="-577"/>
         </scene>
         <!--Feeds Manager View Controller-->
         <scene sceneID="o4j-6e-6VJ">
@@ -73,30 +78,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <button key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mw0-O9-ria">
-                            <rect key="frame" x="-23" y="-15" width="600" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="92"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                            <inset key="contentEdgeInsets" minX="0.0" minY="14" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="Ajouter un flux">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
+                                <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
                                 <action selector="AddFeed:" destination="68U-Tj-fav" eventType="touchUpInside" id="2uY-qc-aZT"/>
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedsCell" textLabel="TdV-az-oTP" detailTextLabel="nxj-s4-iJb" style="IBUITableViewCellStyleValue2" id="rNV-lp-Fdu">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedsCell" textLabel="TdV-az-oTP" detailTextLabel="s5u-rm-y0J" style="IBUITableViewCellStyleSubtitle" id="rNV-lp-Fdu">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rNV-lp-Fdu" id="Wqh-AK-rF9">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TdV-az-oTP">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TdV-az-oTP">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Link" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nxj-s4-iJb">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s5u-rm-y0J">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -113,7 +121,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okI-G3-Ntl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="571" y="371"/>
+            <point key="canvasLocation" x="524" y="330"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -135,5 +143,4 @@
             <point key="canvasLocation" x="-128" y="-166"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="0.50196081399917603" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

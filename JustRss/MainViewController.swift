@@ -17,21 +17,18 @@ class MainViewController: UITableViewController {
         super.viewDidLoad();
         var item = RSSItem();
         item.title = "article1";
-        //datas.append(name:"titre1", items:[RSSItem()]);
-       // datas.append([["title":"toto2"], ["title":"toto3"]]);
-       // datas.append([["title":"toto2"], ["title":"toto3"]]);
         
         self.tableView .registerClass(ORGContainerCell.self, forCellReuseIdentifier: "ORGContainerCell");
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "didSelectItemFromCollectionView:", name: "didSelectItemFromCollectionView", object: nil);
     }
+    
     override func viewDidAppear(animated: Bool) {
-        datas.removeAll(keepCapacity: false);
-        DataManager.sharedInstance.buildDatas(buildData);
-
+        self.refreshTapped(nil);
     }
     
-    @IBAction func refreshTapped(sender: UIButton)
+    @IBAction func refreshTapped(sender: UIButton?)
     {
+        titles.removeAll(keepCapacity: false);
         datas.removeAll(keepCapacity: false);
         DataManager.sharedInstance.buildDatas(buildData);
     }
@@ -41,7 +38,11 @@ class MainViewController: UITableViewController {
         var allFeeds = Array<[String : AnyObject]>();
         for feed in feeds
         {
-            allFeeds.append(["title":feed.title, "imageLink":imageLinkFromContent(feed.content), "content":feed.content]);
+            var content = feed.content ?? feed.itemDescription;
+            var link = feed.link;
+            if (content != nil) {
+                allFeeds.append(["title":feed.title, "imageLink":imageLinkFromContent(content!), "link":link]);
+            }
         }
         self.datas.append(allFeeds);
         self.tableView.reloadData()
@@ -57,20 +58,19 @@ class MainViewController: UITableViewController {
             return "";
         }
         return content.substringWithRange(result!.rangeAtIndex(2));
-        
-        
-        
     }
-        func didSelectItemFromCollectionView(not:NSNotification)
+    
+    func didSelectItemFromCollectionView(not:NSNotification)
     {
-        var content = not.object!.objectForKey("content") as String;
+        var link = not.object!.objectForKey("link") as? NSURL!;
         var configuration = WKWebViewConfiguration();
         
         var webBrowserNavController = KINWebBrowserViewController.navigationControllerWithWebBrowserWithConfiguration(configuration);
         self.presentViewController(webBrowserNavController, animated: true, completion: nil);
         var webBrowser = webBrowserNavController.rootWebBrowser();
-        webBrowser.wkWebView.loadHTMLString(content, baseURL: nil);
-        
+        if (link != nil) {
+            webBrowser.loadURL(link);
+        }
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
